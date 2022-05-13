@@ -1,0 +1,66 @@
+version: '3.6'
+
+services:
+  db:
+    image: mysql
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sudoroot
+      MYSQL_DATABASE: airvision
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+    ports:
+      - 3308:3306
+
+  adminer:
+    image: adminer
+    container_name: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+
+  # ======= IMAGEM'S PARA TESTES =======
+  
+  # java:
+  #   image: openjdk:11
+  #   container_name: jdk
+  #   volumes:
+  #   - ./jar:/usr/src/myapp
+  # # aqui^^^ dentro tem os jar e um script.sh
+  #   working_dir: /usr/src/myapp
+  #   command: bash -c "./script_teste_docker.sh"
+
+  # java_teste:
+  #   image: openjdk:11
+  #   container_name: jdk
+  #   working_dir: /usr/src/myapp
+
+  # java:
+  #   image: openjdk:7
+  #   depends_on:
+  #   - db
+  #   volumes:
+  #   - /home/crismon-01/Documenti/TESI/Docker/mysqlLogin:/usr/src/myapp 
+  #   working_dir: /usr/src/myapp
+  #   command: java -jar LogiIn.jar
+
+  # mysql:
+  #     image: mysql:5.7
+  #     container_name: mysql
+  #     environment:
+  #       - MYSQL_DATABASE=airvision
+  #       - MYSQL_USER=root
+  #       - MYSQL_PASSWORD=root
+  #       - MYSQL_ROOT_PASSWORD=root
+  #     volumes:
+  #       - ./data/mysql:/var/lib/mysql
+  #       - ./sql:/docker-entrypoint-initdb.d
+  #     ports:
+  #       - 3307:3306
+  #     tty: true
