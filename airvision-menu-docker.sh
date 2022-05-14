@@ -119,7 +119,10 @@ menuDocker() {
             echo -e "=============================================================="
             sleep 2
             if [ $y = y ]; then
-                docker rm $(docker ps -aq) -f && docker rmi $(docker images -aq) -f && docker volume rm $(docker volume ls -q) && docker builder prune -f
+                docker rm $(docker ps -aq) -f
+                docker rmi $(docker images -aq) -f
+                docker volume rm $(docker volume ls -q)
+                docker builder prune -f
                 sleep 4
                 argumento="$cGreenN Remoção efetuada com SUCESSO!$cReset" && sleepTime="3" && execTimeSleepArg
             else
