@@ -56,7 +56,7 @@ menuDocker() {
             argumento="Iniciar um container!" && sleepTime="2" && execTimeSleepArg
             acaoStopOrStart="start"
             dockerStartStop
-            sleep 2
+            errorValidation
             argumento="$opcaoContainerInformado Iniciado com SUCESSO..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
@@ -74,7 +74,7 @@ menuDocker() {
             argumento="Parar um container!" && sleepTime="2" && execTimeSleepArg
             acaoStopOrStart="stop"
             dockerStartStop
-            sleep 2
+            errorValidation
             argumento="$opcaoContainerInformado Parado com SUCESSO..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;

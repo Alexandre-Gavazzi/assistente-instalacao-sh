@@ -1,8 +1,5 @@
 #!/bin/bash
 
-cd /./assistente-instalacao-sh
-source ./includes/utils.sh
-
 dockerStartStop() {
     echo "                                                              "
     echo "                    TODOS OS CONTAINERS"
@@ -14,6 +11,5 @@ dockerStartStop() {
     echo "                  Container informado ($opcaoContainerInformado)"
     echo "=============================================================="
     sleep 1
-    docker $acaoStopOrStart $opcaoContainerInformado && errorValidation
-    unset acaoStopOrStart
+    docker $acaoStopOrStart $opcaoContainerInformado
 }
