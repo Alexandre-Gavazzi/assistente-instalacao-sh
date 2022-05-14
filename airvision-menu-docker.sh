@@ -57,7 +57,7 @@ menuDocker() {
             acaoStopOrStart="start"
             dockerStartStop
             errorValidation
-            argumento="$opcaoContainerInformado Iniciado com SUCESSO..." && sleepTime="2" && execTimeSleepArg
+            argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
@@ -75,7 +75,7 @@ menuDocker() {
             acaoStopOrStart="stop"
             dockerStartStop
             errorValidation
-            argumento="$opcaoContainerInformado Parado com SUCESSO..." && sleepTime="2" && execTimeSleepArg
+            argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
