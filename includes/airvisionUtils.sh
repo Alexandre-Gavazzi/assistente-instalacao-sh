@@ -1,7 +1,7 @@
 #!/bin/bash
 
 airvisionJarExists() {
-    cd /./assistente-instalacao
+    cd /./assistente-instalacao-sh
     if [ -e "airvision.jar" ]; then
         echo "                        MONITORAMENTO                         "
         echo -e "$cYellowN                            1 - Abrir AirVision CLI           $cBlueN"
@@ -15,7 +15,7 @@ airvisionJarExists() {
 }
 
 dockerExists() {
-    cd /./assistente-instalacao
+    cd /./assistente-instalacao-sh
     if [ -e "docker" ]; then
         echo "                        DOCKER-COMPOSE                        "
         echo -e "$cYellowN                            3 - Abrir MENU DOCKER             $cBlueN"
@@ -41,8 +41,8 @@ installDockerSettings() {
     git checkout main airvision-menu-docker.sh && errorValidation
     git checkout main docker && errorValidation
     chmod +x airvision-menu-docker.sh && echo -e "$cYellowN chmod airvision-menu-docker.sh...$cReset" && errorValidation
-    cd /./assistente-instalacao/docker
+    cd /./assistente-instalacao-sh/docker
     chmod +x docker-compose.yml && echo -e "$cYellowN chmod docker-compose.yml...$cReset" && errorValidation
-    cd /./assistente-instalacao/docker/initdb
+    cd /./assistente-instalacao-sh/docker/initdb
     chmod +x airvision.sql && echo -e "$cYellowN chmod airvision.sql...$cReset" && errorValidation
 }
