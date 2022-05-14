@@ -89,10 +89,11 @@ menuDocker() {
         6) #====================LIMPAR IMAGENS====================
             argumento="Removendo imagens docker..." && sleepTime="2" && execTimeSleepArg
             docker rmi $(docker images -aq) -f
+            errorValidation
+            docker rmi $(docker images -aq) -f
             if [ "$?" -ne 0 ]; then
                 echo -e "$cYellowN Tente remover os container's para remover as imagens!$cReset"
             fi
-            errorValidation
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
