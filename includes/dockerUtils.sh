@@ -1,5 +1,8 @@
 #!/bin/bash
 
+cd /./assistente-instalacao-sh
+source ./includes/utils.sh
+
 dockerStartStop() {
     echo "                                                              "
     echo "                    TODOS OS CONTAINERS"
