@@ -39,7 +39,7 @@ menu() {
 
         install-airv) #====================INSTALAR TUDO PARA COMEÇAR A USAR O MONITORAMENTO====================
             argumento="Atualizando Sistema..." && sleepTime="3" && execTimeSleepArg
-            sudo apt update && sudo apt upgrade -y
+            echo -e "$cBlueN" && sudo apt update && sudo apt upgrade -y
 
             argumento="Instalando Zip..." && sleepTime="3" && execTimeSleepArg
             sudo apt install zip -y
@@ -120,6 +120,8 @@ menu() {
                 installBasicSettings
                 installDockerSettings
             fi
+
+            sudo systemctl enable docker
 
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"

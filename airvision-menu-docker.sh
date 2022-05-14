@@ -45,51 +45,66 @@ menuDocker() {
 
         1) #====================INICIAR TODOS OS CONTAINERS====================
             argumento="Iniciando todos os Container's" && sleepTime="2" && execTimeSleepArg
+            echo -e "$cBlueN"
             cd /./assistente-instalacao-sh/docker
             docker-compose up -d && errorValidation
             sleep 2
+            echo -e "$cReset"
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         2) #====================INICIAR UM CONTAINER====================
             argumento="Iniciar um container!" && sleepTime="2" && execTimeSleepArg
+            echo -e "$cBlueN"
             acaoStopOrStart="start"
             dockerStartStop
             errorValidation
+            sleep 2
+            echo -e "$cReset"
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         3) #====================PARAR TODOS OS CONTAINERS====================
             argumento="Parando todos os Container's..." && sleepTime="2" && execTimeSleepArg
+            echo -e "$cBlueN"
             cd /./assistente-instalacao-sh/docker
             docker-compose stop && errorValidation
             sleep 2
+            echo -e "$cReset"
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         4) #====================PARAR UM CONTAINER====================
             argumento="Parar um container!" && sleepTime="2" && execTimeSleepArg
+            echo -e "$cBlueN"
             acaoStopOrStart="stop"
             dockerStartStop
             errorValidation
+            sleep 2
+            echo -e "$cReset"
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         5) #====================LIMPAR CONTAINERS====================
             argumento="Removendo container's docker..." && sleepTime="2" && execTimeSleepArg
+            echo -e "$cBlueN"
             docker rm $(docker ps -aq) -f && errorValidation
+            sleep 2
+            echo -e "$cReset"
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         6) #====================LIMPAR IMAGENS====================
             argumento="Removendo imagens docker..." && sleepTime="2" && execTimeSleepArg
-            docker rmi $(docker images -aq) -f
-            errorValidation
+            echo -e "$cBlueN"
+            docker rmi $(docker images -aq) -f && errorValidation
+            sleep 2
+            echo -e "$cReset"
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
@@ -101,7 +116,7 @@ menuDocker() {
             echo -e "$cYellowN          Deseja realmente Limpar Tudo do Docker? (y/N)       "
             read y
             echo -e "                      Opção informada ($y)                    $cBlueN"
-            echo -e "==============================================================$cReset"
+            echo -e "=============================================================="
             sleep 2
             if [ $y = y ]; then
                 docker rm $(docker ps -aq) -f && docker rmi $(docker images -aq) -f && docker volume rm $(docker volume ls -q) && docker builder prune -f
@@ -115,7 +130,9 @@ menuDocker() {
 
         return) #====================VOLTAR====================
             argumento="Voltando menu airvision..." && sleepTime="2" && execTimeSleepArg
+            echo -e "$cBlueN"
             cd /./assistente-instalacao-sh && source ./airvision-install-menu.sh
+            echo -e "$cReset"
             ;;
 
         help) #====================HELP====================

@@ -3,12 +3,12 @@
 dockerStartStop() {
     echo "                                                              "
     echo "                    TODOS OS CONTAINERS"
-    echo "=============================================================="
+    echo -e "==============================================================$cYellowN"
     docker ps -a --format "table {{.Names}}\t{{.ID}}\t{{.Image}}"
-    echo "=============================================================="
+    echo -e "$cBlueN==============================================================$cYellowN"
     echo "     Digite o nome do container, como descrito na tabela:     "
     read opcaoContainerInformado
-    echo "                  Container informado ($opcaoContainerInformado)"
+    echo -e "                  Container informado ($opcaoContainerInformado)$cBlueN"
     echo "=============================================================="
     sleep 1
     docker $acaoStopOrStart $opcaoContainerInformado
