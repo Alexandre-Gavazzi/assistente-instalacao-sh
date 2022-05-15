@@ -71,7 +71,7 @@ cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
 - <b>Iniciando os container's do Docker:</b> <br>
   🚩 <b>1º</b> Com o menu AirVision Aberto, execute a `opção 3` para entrar no menu Docker. <br>
 
-  🚩 <b>2º</b> Com o menu Docker Aberto, execute a `opção 1` para iniciar todos os container's do Docker. <br>
+  🚩 <b>2º</b> Com o menu Docker Aberto, execute a `opção 1` para iniciar todos os container's do Docker. <br> <br>
 
 - <b>Iniciando a aplicação AirVision CLI(Interface de Linha de Comando)</b> <br>
   🚩 <b>1º</b> Com o menu AirVision Aberto, execute a `opção 1` para abrir a aplicação via Linha de Comando. <br>
@@ -79,7 +79,7 @@ cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
   🚩 <b>2º</b> Efetue o Login com suas credenciais. <br>
 
   🏁 <b>3º</b> Pronto, sua máquina está sendo monitorada. <br>
-  `Para visualização da mesma, basta acessar a página de monitoramento no site "www.airvision.com.br" e visualizar sua máquina de qualquer outro dispositivo.`
+  `Para visualização da mesma, basta acessar a página de monitoramento no site "www.airvision.com.br" e visualizar sua máquina de qualquer outro dispositivo.` <br> <br>
 
 - <b>Iniciando a aplicação AirVision GUI(Interface Gráfica de Utilizador)</b> <br>
   🚩 <b>1º</b> Com o menu AirVision Aberto, execute a `opção 2` para abrir a aplicação via Interface Gráfica. <br>
