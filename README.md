@@ -14,7 +14,7 @@ Observação: Para prosseguir com a instalação, será necessário o acesso de 
   2º informe a senha do administrador. <br> <br>
 
 - Agora, já com o acesso de administrador: <br>
-  1º execute o seguinte comando:
+  3º execute o seguinte comando:
   ```sh
   cd / && git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && cd /./assistente-instalacao-sh && git checkout main airvision-install-menu.sh && git checkout main includes && chmod +x airvision-install-menu.sh && chmod +x includes/* && cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
   ```
@@ -22,7 +22,9 @@ Observação: Para prosseguir com a instalação, será necessário o acesso de 
 
 ## 2º Passo - Instalação:
 
-- Ainda com o acesso de administrador e agora com o menu/instalação aberto: <br>
+Ainda com o acesso de administrador e agora com o menu/instalação aberto: <br>
+
+- Instalação do AirVision:
   1º execute o seguinte comando:
 
   ```sh
@@ -31,10 +33,11 @@ Observação: Para prosseguir com a instalação, será necessário o acesso de 
 
   O comando acima está atualizando a sua máquina linux, instalando os pacotes(zip, sdkman, java:11) e efetuando o download do executável para o uso do AirVision.
 
-2º execute o seguinte comando:
+- Instalação do Docker:
+  2º execute o seguinte comando: <br> <br>
 
-```sh
-install-docker
-```
+  ```sh
+  install-docker
+  ```
 
-O comando acima está atualizando a sua máquina linux, instalando os pacotes(docker.io, docker-compose), dependências(ca-certificates, curl, gnupg, lsb-release), efetuando ajustes em arquivos .gpg, criando variáveis de ambiente, instalando plugins do docker, baixando os arquivos de uso do docker e fornecendo as permissões necessárias os arquivos de uso do docker.
+  O comando acima está atualizando a sua máquina linux, instalando os pacotes(docker.io, docker-compose), dependências(ca-certificates, curl, gnupg, lsb-release), efetuando ajustes em arquivos .gpg, criando variáveis de ambiente, instalando plugins do docker, baixando os arquivos de uso do docker e fornecendo as permissões necessárias os arquivos de uso do docker.
