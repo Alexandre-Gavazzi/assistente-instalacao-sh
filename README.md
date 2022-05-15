@@ -22,7 +22,7 @@
 
   <i>`O comando acima está baixando o repositório de instalação/uso, fornecendo as permissões necessárias para os script's em shell e iniciando o menu de instalação/uso do AirVision.`</i> <br>
 
-  <i>⚠`Caso já tenha alguma versão anterior em sua máquina, utilize o seguinte comando antes de efetuar o download, pois o mesmo vai limpar todo ambiente e apagar quaisquer versões anteriores do AirVision:`</i>
+  <i>⚠`Caso já tenha alguma versão anterior em sua máquina, utilize o seguinte comando antes de efetuar o download, pois o mesmo vai limpar todo ambiente e apagar quaisquer versões anteriores do AirVision.`</i>
 
   ```sh
   cd / && rm -rf assistente-instalacao-sh
@@ -53,7 +53,7 @@
 ## 3º Passo - Utilização do AirVision:
 
 - <b>Iniciando os container's do Docker:</b> <br>
-  🚩 <b>1️º</b> Tenha aberto o menu AirVision: <i>⚠` Caso não esteja aberto, execute o comando abaixo`</i>
+  🚩 <b>1️º</b> Tenha aberto o menu AirVision: <i>⚠` Caso não esteja aberto, execute o comando abaixo, pois o mesmo vai abrir o menu AirVision.`</i>
 
   ```sh
   cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
