@@ -62,6 +62,9 @@ Ainda com o acesso de administrador e agora com o menu/instalação aberto: <br>
 
   `O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu AirVision.` <br>
 
-  ♦💡📌📍 2º Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
+  ♦ 2º Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
+  💡 2º Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
+  📌 2º Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
+  📍 2º Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
 
   3º Com o menu Docker Aberto, execute a opção 1 para iniciar todos os container's do Docker. <br>
