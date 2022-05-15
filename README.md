@@ -31,7 +31,13 @@
 ## 2º Passo - Instalação:
 
 <i>⚠ Observação: Ainda com o acesso de administrador e agora com o menu/instalação aberto:</i> <br>
-<i>` Caso não esteja aberto, execute o comando abaixo, pois o mesmo vai abrir o menu de instalação.`</i> <br>
+<i>` Caso não esteja aberto, execute o comando abaixo, pois o mesmo vai abrir o menu de instalação.`</i>
+
+```sh
+cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
+```
+
+<i>`O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu de instalação.`</i> <br>
 
 - <b>Instalação do AirVision:</b> <br>
   🚩 <b>1º</b> Execute o seguinte comando:
