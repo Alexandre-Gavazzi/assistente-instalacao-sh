@@ -54,13 +54,14 @@ Ainda com o acesso de administrador e agora com o menu/instalação aberto: <br>
 
 - <b>Iniciando os container's do Docker:</b> <br>
   🚩 <b>1️º</b> Tenha aberto o menu AirVision: <br>
-  <i>`⚠ Caso não esteja aberto, execute o comando abaixo`</i>
+  <i>⚠` Caso não esteja aberto, execute o comando abaixo`</i>
 
   ```sh
-  <b> cd /./assistente-instalacao-sh && ./airvision-install-menu.sh <//b>
+  cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
   ```
-  `O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu AirVision.` <br>
 
-🚩 <b>2º</b> Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
+  `O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu AirVision.`<br>
 
-🚩 <b>3º</b> Com o menu Docker Aberto, execute a opção 1 para iniciar todos os container's do Docker. <br>
+  🚩 <b>2º</b> Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
+
+  🚩 <b>3º</b> Com o menu Docker Aberto, execute a opção 1 para iniciar todos os container's do Docker. <br>
