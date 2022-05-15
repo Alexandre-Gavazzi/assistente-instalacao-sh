@@ -59,7 +59,7 @@ Ainda com o acesso de administrador e agora com o menu/instalação aberto: <br>
   cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
   ```
 
-  `O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu AirVision.`<br>
+  <i>`O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu AirVision.`</i> <br>
 
   🚩 <b>2º</b> Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
 
