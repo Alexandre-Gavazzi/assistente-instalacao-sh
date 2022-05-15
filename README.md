@@ -13,7 +13,7 @@ Observação: Para prosseguir com a instalação e uso do AirVision, será neces
 
   2º Informe a senha do administrador. <br> <br>
 
-- Para efetuar o download de todos os arquivos necessários para uso: <br>
+- Para efetuar o download de todos os arquivos necessários: <br>
   Execute o seguinte comando para efetuar o download e preparação da máquina:
 
   ```sh
@@ -52,15 +52,15 @@ Ainda com o acesso de administrador e agora com o menu/instalação aberto: <br>
 
 ## 3º Passo - Utilização do AirVision:
 
-- Iniciando os container's do Docker: <br>
-  1º Tenha aberto o menu AirVision:
-  (Caso não esteja aberto, execute o comando abaixo)
+- Iniciando os container's do Docker 🐳: <br>
+  1️⃣º Tenha aberto o menu AirVision:
+  `⚠ Caso não esteja aberto, execute o comando abaixo`
 
   ```sh
   cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
   ```
 
-  O comando acima está entrando no diretório do "assistente de instalação/uso" do AirVision e iniciando o menu AirVision. <br>
+  `O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu AirVision.` <br>
 
   2º Com o menu AirVision Aberto, execute a opção 3 para entrar no menu Docker. <br>
 
