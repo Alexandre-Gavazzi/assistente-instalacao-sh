@@ -11,7 +11,7 @@
   sudo su
   ```
 
-  🚩 <b>2º</b> Informe a senha do administrador. <br> <br>
+  🚩 <b>2º</b> Informe a `senha` do administrador. <br> <br>
 
 - <b>Para efetuar o download de todos os arquivos necessários:</b> <br>
   🚩 Execute o seguinte comando para efetuar o download e preparação da máquina:
@@ -30,7 +30,8 @@
 
 ## 2º Passo - Instalação:
 
-<i>⚠ Ainda com o acesso de administrador e agora com o menu/instalação aberto:</i> <br>
+<i>⚠ Observação: Ainda com o acesso de administrador e agora com o menu/instalação aberto:</i> <br>
+<i>` Caso não esteja aberto, execute o comando abaixo, pois o mesmo vai abrir o menu AirVision.`</i> <br>
 
 - <b>Instalação do AirVision:</b> <br>
   🚩 <b>1º</b> Execute o seguinte comando:
@@ -64,3 +65,5 @@
   🚩 <b>2º</b> Com o menu AirVision Aberto, execute a `opção 3` para entrar no menu Docker. <br>
 
   🚩 <b>3º</b> Com o menu Docker Aberto, execute a `opção 1` para iniciar todos os container's do Docker. <br>
+
+- <b>Iniciando os container's do Docker:</b> <br>
