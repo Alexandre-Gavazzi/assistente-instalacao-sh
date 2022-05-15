@@ -59,17 +59,32 @@ cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
 
 ## 3º Passo - Utilização do AirVision:
 
-- <b>Iniciando os container's do Docker:</b> <br>
-  🚩 <b>1️º</b> Tenha aberto o menu AirVision: <i>⚠` Caso não esteja aberto, execute o comando abaixo, pois o mesmo vai abrir o menu AirVision.`</i>
+<i>⚠ Observação: Ainda com o acesso de administrador e agora com o menu AirVision aberto:</i> <br>
+<i>` Caso não esteja aberto, execute o comando abaixo, pois o mesmo vai abrir o menu AirVision.`</i>
 
-  ```sh
-  cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
-  ```
+```sh
+cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
+```
 
-  <i>`O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu AirVision.`</i> <br>
-
-  🚩 <b>2º</b> Com o menu AirVision Aberto, execute a `opção 3` para entrar no menu Docker. <br>
-
-  🚩 <b>3º</b> Com o menu Docker Aberto, execute a `opção 1` para iniciar todos os container's do Docker. <br>
+<i>`O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu AirVision.`</i> <br>
 
 - <b>Iniciando os container's do Docker:</b> <br>
+  🚩 <b>1º</b> Com o menu AirVision Aberto, execute a `opção 3` para entrar no menu Docker. <br>
+
+  🚩 <b>2º</b> Com o menu Docker Aberto, execute a `opção 1` para iniciar todos os container's do Docker. <br>
+
+- <b>Iniciando a aplicação AirVision CLI(Interface de Linha de Comando)</b> <br>
+  🚩 <b>1º</b> Com o menu AirVision Aberto, execute a `opção 1` para abrir a aplicação via Linha de Comando. <br>
+
+  🚩 <b>2º</b> Efetue o Login com suas credenciais. <br>
+
+  🏁 <b>3º</b> Pronto, sua máquina está sendo monitorada. <br>
+  `Para visualização da mesma, basta acessar a página de monitoramento no site "www.airvision.com.br" e visualizar sua máquina de qualquer outro dispositivo.`
+
+- <b>Iniciando a aplicação AirVision GUI(Interface Gráfica de Utilizador)</b> <br>
+  🚩 <b>1º</b> Com o menu AirVision Aberto, execute a `opção 2` para abrir a aplicação via Interface Gráfica. <br>
+
+  🚩 <b>2º</b> Efetue o Login com suas credenciais. <br>
+
+  🏁 <b>3º</b> Pronto, sua máquina está sendo monitorada. <br>
+  `Para visualização da mesma, basta acessar a página de monitoramento no site "www.airvision.com.br" e visualizar sua máquina de qualquer outro dispositivo.`
