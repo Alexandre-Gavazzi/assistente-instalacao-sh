@@ -8,10 +8,10 @@ Observação: Para prosseguir com a instalação, será necessário o acesso de 
     ```sh
     sudo su
     ```
-    2º passo: informe a senha do administrador. <br>
+    2º passo: informe a senha do administrador. <br> <br>
  - Agora, já com o acesso de administrador, execute o seguinte comando: <br>
     1º passo:
     ```sh
     cd / && git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && cd /./assistente-instalacao-sh && git checkout main airvision-install-menu.sh && git checkout main includes && chmod +x airvision-install-menu.sh && chmod +x includes/* && cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
     ```
-    O comando acima está baixando o repositório do instalador, fornecendo as permissões necessárias para os script's em shell e iniciando o menu de instalação/uso do AirVision.
+    O comando acima está baixando o repositório do instalador, fornecendo as permissões necessárias para os script's em shell e iniciando o menu de instalação/uso do AirVision. <br> <br>
