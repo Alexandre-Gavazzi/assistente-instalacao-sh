@@ -24,7 +24,7 @@ Observação: Para prosseguir com a instalação, será necessário o acesso de 
 
 Ainda com o acesso de administrador e agora com o menu/instalação aberto: <br>
 
-- Instalação do AirVision:
+- Instalação do AirVision: <br>
   1º execute o seguinte comando:
 
   ```sh
@@ -33,8 +33,8 @@ Ainda com o acesso de administrador e agora com o menu/instalação aberto: <br>
 
   O comando acima está atualizando a sua máquina linux, instalando os pacotes(zip, sdkman, java:11) e efetuando o download do executável para o uso do AirVision.
 
-- Instalação do Docker:
-  2º execute o seguinte comando: <br> <br>
+- Instalação do Docker: <br>
+  2º execute o seguinte comando:
 
   ```sh
   install-docker
