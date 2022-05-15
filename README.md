@@ -5,9 +5,9 @@
 Observação: Para prosseguir com a instalação, será necessário o acesso de administrador da máquina.
  - Para obter acesso de administrador, execute o seguinte comando: <br>
     1º passo:
-    ```sh
+    ...sh
     sudo su
-    ```
+    ...
     2º passo: informe a senha do administrador. <br> <br>
  - Agora, já com o acesso de administrador, execute o seguinte comando: <br>
     1º passo:
