@@ -22,7 +22,7 @@
 
   <i>`O comando acima está baixando o repositório de instalação/uso, fornecendo as permissões necessárias para os script's em shell e iniciando o menu de instalação/uso do AirVision.`</i> <br>
 
-  <i>⚠`Caso já tenha alguma versão anterior em sua máquina, utilize o seguinte comando antes de efetuar o download:`</i>
+  <i>⚠`Caso já tenha alguma versão anterior em sua máquina, utilize o seguinte comando antes de efetuar o download, pois o mesmo vai limpar todo ambiente e apagar quaisquer versões anteriores do AirVision:`</i>
 
   ```sh
   cd / && rm -rf assistente-instalacao-sh
@@ -32,7 +32,7 @@
 
 <i>⚠ Ainda com o acesso de administrador e agora com o menu/instalação aberto:</i> <br>
 
--  <b>Instalação do AirVision:</b> <br>
+- <b>Instalação do AirVision:</b> <br>
   🚩 <b>1º</b> Execute o seguinte comando:
 
   ```sh
@@ -41,7 +41,7 @@
 
   <i>`O comando acima está atualizando a sua máquina linux, instalando os pacotes(zip, sdkman, java:11) e efetuando o download do executável para o uso do AirVision.`</i>
 
--  <b>Instalação do Docker:</b> <br>
+- <b>Instalação do Docker:</b> <br>
   🚩 <b>2º</b> Execute o seguinte comando:
 
   ```sh
