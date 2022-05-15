@@ -40,7 +40,7 @@ cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
 <i>`O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu de instalação.`</i> <br>
 
 - <b>Instalação do AirVision:</b> <br>
-  🚩 <b>1º</b> Execute o seguinte comando:
+  🚩 <b>1º</b> Execute o seguinte comando dentro do menu de instalação:
 
   ```sh
   install-airv
@@ -49,7 +49,7 @@ cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
   <i>`O comando acima está atualizando a sua máquina linux, instalando os pacotes(zip, sdkman, java:11) e efetuando o download do executável para o uso do AirVision.`</i>
 
 - <b>Instalação do Docker:</b> <br>
-  🚩 <b>2º</b> Execute o seguinte comando:
+  🚩 <b>2º</b> Execute o seguinte comando dentro do menu de instalação:
 
   ```sh
   install-docker
