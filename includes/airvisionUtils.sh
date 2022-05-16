@@ -32,9 +32,10 @@ dockerExists() {
 }
 
 dockerAndAirvisionJarExists() {
-    airvisionJarExists
-    dockerExists
-    if [ "$existairvisionjar"=yes ]; then
+    # airvisionJarExists
+    # dockerExists
+    cd /./assistente-instalacao-sh
+    if [ -e "airvision.jar" -a -e "docker" ]; then
         echo "                        MONITORAMENTO                         "
         echo -e "$cYellowN                            1 - Abrir AirVision CLI           $cBlueN"
         echo -e "$cYellowN                            2 - Abrir AirVision GUI           $cBlueN"
