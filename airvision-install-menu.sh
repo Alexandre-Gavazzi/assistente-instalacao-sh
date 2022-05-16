@@ -37,22 +37,22 @@ menu() {
         case "$x" in
 
         setup-install) #====================INSTALAR TUDO PARA COMEÇAR A USAR O MONITORAMENTO/DOCKER====================
-            argumento="Atualizando Sistema...($cGreenN 1 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Atualizando Sistema...($cWhiteN 1 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             echo -e "$cBlueN" && sudo apt update && sudo apt upgrade -y
 
-            argumento="Instalando Zip...($cGreenN 2 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Instalando Zip...($cWhiteN 2 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             sudo apt install zip -y
 
-            argumento="Download sdkman...($cGreenN 3 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Download sdkman...($cWhiteN 3 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             curl -s "https://get.sdkman.io" | bash
 
-            argumento="Reiniciando Terminal($cGreenN 4 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Reiniciando Terminal($cWhiteN 4 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             source "/home/$USER/.sdkman/bin/sdkman-init.sh"
 
-            argumento="Instalando Java...($cGreenN 5 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Instalando Java...($cWhiteN 5 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             sudo apt install openjdk-11-jre -y
 
-            argumento="Download arquivo de instalacao/menu...($cGreenN 6 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Download arquivo de instalacao/menu...($cWhiteN 6 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             cd /
             if [ -e "/assistente-instalacao-sh" ]; then
                 cd /./assistente-instalacao-sh
@@ -66,42 +66,42 @@ menu() {
                 installAirvisonJarSettings
             fi
 
-            argumento="Atualizando Sistema...($cGreenN 7 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
+            argumento="Atualizando Sistema...($cWhiteN 7 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt update && sudo apt upgrade -y
 
-            argumento="Instalando docker...($cGreenN 8 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
+            argumento="Instalando docker...($cWhiteN 8 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt install docker.io -y
 
-            argumento="Instalando docker-compose...($cGreenN 9 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
+            argumento="Instalando docker-compose...($cWhiteN 9 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt install docker-compose -y
 
             # Instalando ca-certificates...Instalando curl...Instalando gnupg...Instalando lsb-release...
-            argumento="Instalando dependências para o Docker...($cGreenN 10 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
+            argumento="Instalando dependências para o Docker...($cWhiteN 10 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt-get install \
             ca-certificates \
             curl \
             gnupg \
             lsb-release -y
 
-            argumento="Download de arquivos necessários...($cGreenN 11 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
+            argumento="Download de arquivos necessários...($cWhiteN 11 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-            argumento="Criando variáveis de ambiente para instalação...($cGreenN 12 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Criando variáveis de ambiente para instalação...($cWhiteN 12 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             echo \
             "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
              $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
-            argumento="Atualizando Sistema...($cGreenN 13 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
+            argumento="Atualizando Sistema...($cWhiteN 13 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt-get update
 
             #Instalando docker-ce... docker-ce-cli... containerd.io... docker-compose-plugin...
-            argumento="Instalando dependências para o Docker...($cGreenN 14 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Instalando dependências para o Docker...($cWhiteN 14 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
-            argumento="Atualizando Sistema...($cGreenN 15 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
+            argumento="Atualizando Sistema...($cWhiteN 15 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt-get update
 
-            argumento="Download arquivos docker-airvision...($cGreenN 16 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
+            argumento="Download arquivos docker-airvision...($cWhiteN 16 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             cd /
             if [ -e "/assistente-instalacao-sh" ]; then
                 cd /./assistente-instalacao-sh
