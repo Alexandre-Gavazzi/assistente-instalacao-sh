@@ -3,26 +3,48 @@
 airvisionJarExists() {
     cd /./assistente-instalacao-sh
     if [ -e "airvision.jar" ]; then
-        echo "                        MONITORAMENTO                         "
-        echo -e "$cYellowN                            1 - Abrir AirVision CLI           $cBlueN"
-        echo -e "$cYellowN                            2 - Abrir AirVision GUI           $cBlueN"
-        echo "--------------------------------------------------------------"
+        # echo "                        MONITORAMENTO                         "
+        # echo -e "$cYellowN                            1 - Abrir AirVision CLI           $cBlueN"
+        # echo -e "$cYellowN                            2 - Abrir AirVision GUI           $cBlueN"
+        # echo "--------------------------------------------------------------"
+        existairvisionjar="yes"
     else
-        echo "                   COMAND INSTALL AIRVISION                   "
-        echo -e "$cYellowN                 install-airv - PREPARAR AMBIENTE             $cBlueN"
-        echo "--------------------------------------------------------------"
+        # echo "                   COMAND INSTALL AIRVISION                   "
+        # echo -e "$cYellowN                 install-airv - PREPARAR AMBIENTE             $cBlueN"
+        # echo "--------------------------------------------------------------"
+        existairvisionjar="no"
     fi
 }
 
 dockerExists() {
     cd /./assistente-instalacao-sh
     if [ -e "docker" ]; then
+        # echo "                        DOCKER-COMPOSE                        "
+        # echo -e "$cYellowN                            3 - Abrir MENU DOCKER             $cBlueN"
+        # echo "--------------------------------------------------------------"
+        existdocker="yes"
+    else
+        # echo "                     COMAND INSTALL DOCKER                    "
+        # echo -e "$cYellowN               install-docker - INSTALAR DOCKER               $cBlueN"
+        # echo "--------------------------------------------------------------"
+        existdocker="no"
+    fi
+}
+
+dockerAndAirvisionJarExists() {
+    airvisionJarExists
+    dockerExists
+    if [ existairvisionjar="yes" -a existdocker="yes" ]; then
+        echo "                        MONITORAMENTO                         "
+        echo -e "$cYellowN                            1 - Abrir AirVision CLI           $cBlueN"
+        echo -e "$cYellowN                            2 - Abrir AirVision GUI           $cBlueN"
+        echo "--------------------------------------------------------------"
         echo "                        DOCKER-COMPOSE                        "
         echo -e "$cYellowN                            3 - Abrir MENU DOCKER             $cBlueN"
         echo "--------------------------------------------------------------"
     else
-        echo "                     COMAND INSTALL DOCKER                    "
-        echo -e "$cYellowN               install-docker - INSTALAR DOCKER               $cBlueN"
+        echo "             COMAND INSTALL AIRVISION AND DOCKER              "
+        echo -e "$cYellowN                setup-install - INSTALAR DOCKER               $cBlueN"
         echo "--------------------------------------------------------------"
     fi
 }

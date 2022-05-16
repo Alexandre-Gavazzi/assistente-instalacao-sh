@@ -20,8 +20,7 @@ menu() {
         echo "=============================================================="
         echo "                        MENU AIRVISION                        "
         echo "--------------------------------------------------------------"
-        airvisionJarExists
-        dockerExists
+        dockerAndAirvisionJarExists
         echo "                        OUTROS COMANDOS                       "
         echo -e "$cYellowN                         exit - SAIR                          "
         echo "                       update - ATUALIZAR                     "
@@ -37,23 +36,23 @@ menu() {
 
         case "$x" in
 
-        install-airv) #====================INSTALAR TUDO PARA COMEÇAR A USAR O MONITORAMENTO====================
-            argumento="Atualizando Sistema..." && sleepTime="3" && execTimeSleepArg
+        setup-install) #====================INSTALAR TUDO PARA COMEÇAR A USAR O MONITORAMENTO/DOCKER====================
+            argumento="Atualizando Sistema...($cGreenN 1 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             echo -e "$cBlueN" && sudo apt update && sudo apt upgrade -y
 
-            argumento="Instalando Zip..." && sleepTime="3" && execTimeSleepArg
+            argumento="Instalando Zip...($cGreenN 2 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             sudo apt install zip -y
 
-            argumento="Download sdkman..." && sleepTime="3" && execTimeSleepArg
+            argumento="Download sdkman...($cGreenN 3 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             curl -s "https://get.sdkman.io" | bash
 
-            argumento="Reiniciando Terminal" && sleepTime="3" && execTimeSleepArg
+            argumento="Reiniciando Terminal($cGreenN 4 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             source "/home/$USER/.sdkman/bin/sdkman-init.sh"
 
-            argumento="Instalando Java..." && sleepTime="3" && execTimeSleepArg
+            argumento="Instalando Java...($cGreenN 5 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             sudo apt install openjdk-11-jre -y
 
-            argumento="Download arquivo de instalacao/menu..." && sleepTime="3" && execTimeSleepArg
+            argumento="Download arquivo de instalacao/menu...($cGreenN 6 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             cd /
             if [ -e "/assistente-instalacao-sh" ]; then
                 cd /./assistente-instalacao-sh
@@ -67,47 +66,42 @@ menu() {
                 installAirvisonJarSettings
             fi
 
-            argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
-            echo "================================================"
-            ;;
-
-        install-docker) #====================INSTALAR DOCKER====================
-            argumento="Atualizando Sistema..." && sleepTime="2" && execTimeSleepArg
+            argumento="Atualizando Sistema...($cGreenN 7 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt update && sudo apt upgrade -y
 
-            argumento="Instalando docker..." && sleepTime="2" && execTimeSleepArg
+            argumento="Instalando docker...($cGreenN 8 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt install docker.io -y
 
-            argumento="Instalando docker-compose..." && sleepTime="2" && execTimeSleepArg
+            argumento="Instalando docker-compose...($cGreenN 9 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt install docker-compose -y
 
             # Instalando ca-certificates...Instalando curl...Instalando gnupg...Instalando lsb-release...
-            argumento="Instalando dependências para o Docker..." && sleepTime="2" && execTimeSleepArg
+            argumento="Instalando dependências para o Docker...($cGreenN 10 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt-get install \
             ca-certificates \
             curl \
             gnupg \
             lsb-release -y
 
-            argumento="Download de arquivos necessários..." && sleepTime="2" && execTimeSleepArg
+            argumento="Download de arquivos necessários...($cGreenN 11 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-            argumento="Criando variáveis de ambiente para instalação..." && sleepTime="3" && execTimeSleepArg
+            argumento="Criando variáveis de ambiente para instalação...($cGreenN 12 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             echo \
             "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
              $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
-            argumento="Atualizando Sistema..." && sleepTime="2" && execTimeSleepArg
+            argumento="Atualizando Sistema...($cGreenN 13 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt-get update
 
             #Instalando docker-ce... docker-ce-cli... containerd.io... docker-compose-plugin...
-            argumento="Instalando dependências para o Docker..." && sleepTime="3" && execTimeSleepArg
+            argumento="Instalando dependências para o Docker...($cGreenN 14 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
-            argumento="Atualizando Sistema..." && sleepTime="2" && execTimeSleepArg
+            argumento="Atualizando Sistema...($cGreenN 15 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             sudo apt-get update
 
-            argumento="Download arquivos docker-airvision..." && sleepTime="3" && execTimeSleepArg
+            argumento="Download arquivos docker-airvision...($cGreenN 16 $cYellowN/$cRedN 17 $cYellowN)$cReset" && sleepTime="3" && execTimeSleepArg
             cd /
             if [ -e "/assistente-instalacao-sh" ]; then
                 cd /./assistente-instalacao-sh
@@ -123,7 +117,7 @@ menu() {
 
             sudo systemctl enable docker
 
-            argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
+            argumento="Script Concluído...($cGreenN 17 $cYellowN/$cGreenN 17 $cYellowN)$cReset" && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
