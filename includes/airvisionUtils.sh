@@ -34,7 +34,7 @@ dockerExists() {
 dockerAndAirvisionJarExists() {
     airvisionJarExists
     dockerExists
-    if [ "$existairvisionjar"="yes" -a "$existdocker"="yes" ]; then
+    if [ "$existairvisionjar"=yes -a "$existdocker"=yes ]; then
         echo "                        MONITORAMENTO                         "
         echo -e "$cYellowN                            1 - Abrir AirVision CLI           $cBlueN"
         echo -e "$cYellowN                            2 - Abrir AirVision GUI           $cBlueN"
