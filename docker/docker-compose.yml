@@ -13,7 +13,7 @@ services:
       MYSQL_PASSWORD: root
 
     volumes:
-      - ./initdb:/docker-entrypoint-initdb.d
+      - ./sql:/docker-entrypoint-initdb.d
     ports:
       - 3308:3306
 
@@ -24,9 +24,16 @@ services:
     ports:
       - 8080:8080
 
-
-  # ======= IMAGEM'S PARA TESTES =======
+  java:
+    image: openjdk:11
+    container_name: jdk
+    volumes:
+      - ./java:/usr/src/myapp
+    working_dir: /usr/src/myapp
+    command: java -jar airvision.jar
   
+  # ======= IMAGEM'S PARA TESTES =======
+
   # java:
   #   image: openjdk:11
   #   container_name: jdk
