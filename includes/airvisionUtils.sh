@@ -45,7 +45,7 @@ dockerAndAirvisionJarExists() {
         echo "--------------------------------------------------------------"
     else
         echo "             COMAND INSTALL AIRVISION AND DOCKER              "
-        echo -e "$cYellowN                setup-install - INSTALAR DOCKER               $cBlueN"
+        echo -e "$cYellowN                setup-install - INSTALAR               $cBlueN"
         echo "--------------------------------------------------------------"
     fi
 }
@@ -66,6 +66,8 @@ installDockerSettings() {
     chmod +x airvision-menu-docker.sh && echo -e "$cYellowN chmod airvision-menu-docker.sh...$cReset" && errorValidation
     cd /./assistente-instalacao-sh/docker
     chmod +x docker-compose.yml && echo -e "$cYellowN chmod docker-compose.yml...$cReset" && errorValidation
-    cd /./assistente-instalacao-sh/docker/initdb
+    cd /./assistente-instalacao-sh/docker/sql
     chmod +x airvision.sql && echo -e "$cYellowN chmod airvision.sql...$cReset" && errorValidation
+    cd /./assistente-instalacao-sh/docker/java
+    chmod +x airvision.jar && echo -e "$cYellowN chmod airvision.jar...$cReset" && errorValidation
 }

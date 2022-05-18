@@ -7,10 +7,10 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: sudoroot
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: airvision
-      MYSQL_USER: user
-      MYSQL_PASSWORD: root
+      MYSQL_USER: urubu100
+      MYSQL_PASSWORD: urubu100
 
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
