@@ -51,23 +51,23 @@ dockerAndAirvisionJarExists() {
 }
 
 installAirvisonJarSettings() {
-    git checkout main airvision.jar && errorValidation
-    chmod +x airvision.jar && echo -e "$cYellowN chmod airvision.jar...$cReset" && errorValidation
+    sudo git checkout main airvision.jar && errorValidation
+    sudo chmod +x airvision.jar && echo -e "$cYellowN chmod airvision.jar...$cReset" && errorValidation
 }
 
 installBasicSettings() {
-    git checkout main airvision-install-menu.sh && errorValidation
-    chmod +x airvision-install-menu.sh && echo -e "$cYellowN chmod airvision-install-menu.sh...$cReset" && errorValidation
+    sudo git checkout main airvision-install-menu.sh && errorValidation
+    sudo chmod +x airvision-install-menu.sh && echo -e "$cYellowN chmod airvision-install-menu.sh...$cReset" && errorValidation
 }
 
 installDockerSettings() {
-    git checkout main airvision-menu-docker.sh && errorValidation
-    git checkout main docker && errorValidation
+    sudo git checkout main airvision-menu-docker.sh && errorValidation
+    sudo git checkout main docker && errorValidation
     chmod +x airvision-menu-docker.sh && echo -e "$cYellowN chmod airvision-menu-docker.sh...$cReset" && errorValidation
     cd /./assistente-instalacao-sh/docker
-    chmod +x docker-compose.yml && echo -e "$cYellowN chmod docker-compose.yml...$cReset" && errorValidation
+    sudo chmod +x docker-compose.yml && echo -e "$cYellowN chmod docker-compose.yml...$cReset" && errorValidation
     cd /./assistente-instalacao-sh/docker/sql
-    chmod +x airvision.sql && echo -e "$cYellowN chmod airvision.sql...$cReset" && errorValidation
+    sudo chmod +x airvision.sql && echo -e "$cYellowN chmod airvision.sql...$cReset" && errorValidation
     cd /./assistente-instalacao-sh/docker/java
-    chmod +x airvision.jar && echo -e "$cYellowN chmod airvision.jar...$cReset" && errorValidation
+    sudo chmod +x airvision.jar && echo -e "$cYellowN chmod airvision.jar...$cReset" && errorValidation
 }

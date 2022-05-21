@@ -17,7 +17,7 @@
   🚩 Execute o seguinte comando para efetuar o download e preparação da máquina:
 
   ```sh
-  cd / && git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && cd /./assistente-instalacao-sh && git checkout main airvision-install-menu.sh && git checkout main includes && chmod +x airvision-install-menu.sh && chmod +x includes/* && cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
+  cd / && sudo git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && cd /./assistente-instalacao-sh && sudo git checkout main airvision-install-menu.sh && sudo git checkout main includes && sudo chmod +x airvision-install-menu.sh && sudo chmod +x includes/* && cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
   ```
 
   <i>`O comando acima está baixando o repositório de instalação/uso, fornecendo as permissões necessárias para os script's em shell e iniciando o menu de instalação/uso do AirVision.`</i> <br>
@@ -39,23 +39,14 @@ cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
 
 <i>`O comando acima está entrando no diretório do assistente de instalação/uso do AirVision e iniciando o menu de instalação.`</i> <br>
 
-- <b>Instalação do AirVision:</b> <br>
+- <b>Instalação Completa:</b> <br>
   🚩 <b>1º</b> Execute o seguinte comando dentro do menu de instalação:
 
   ```sh
-  install-airv
+  setup-install
   ```
 
-  <i>`O comando acima está atualizando a sua máquina linux, instalando os pacotes(zip, sdkman, java:11) e efetuando o download do executável para o uso do AirVision.`</i>
-
-- <b>Instalação do Docker:</b> <br>
-  🚩 <b>2º</b> Execute o seguinte comando dentro do menu de instalação:
-
-  ```sh
-  install-docker
-  ```
-
-  <i>`O comando acima está atualizando a sua máquina linux, instalando os pacotes(docker.io, docker-compose), dependências(ca-certificates, curl, gnupg, lsb-release), efetuando ajustes em arquivos .gpg, criando variáveis de ambiente, instalando plugins do docker, baixando os arquivos de uso do docker e fornecendo as permissões necessárias os arquivos de uso do docker.`</i> <br> <br>
+  <i>`O comando acima está atualizando a sua máquina linux, instalando os pacotes(zip, sdkman, java:11) e efetuando o download do executável para o uso do AirVision, instalando os pacotes(docker.io, docker-compose), dependências(ca-certificates, curl, gnupg, lsb-release), efetuando ajustes em arquivos .gpg, criando variáveis de ambiente, instalando plugins do docker, baixando os arquivos de uso do docker e fornecendo as permissões necessárias os arquivos de uso do docker.`</i>
 
 ## 3º Passo - Utilização do AirVision:
 

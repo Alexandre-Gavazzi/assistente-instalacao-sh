@@ -3,7 +3,7 @@
 x="teste"
 
 cd /./assistente-instalacao-sh
-git checkout main includes
+sudo git checkout main includes
 source ./includes/utils.sh
 source ./includes/dockerUtils.sh
 

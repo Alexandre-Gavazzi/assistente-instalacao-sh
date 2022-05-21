@@ -3,7 +3,7 @@
 x="teste"
 
 cd /./assistente-instalacao-sh
-git checkout main includes
+sudo git checkout main includes
 source ./includes/utils.sh
 source ./includes/airvisionUtils.sh
 
@@ -56,11 +56,11 @@ menu() {
             cd /
             if [ -e "/assistente-instalacao-sh" ]; then
                 cd /./assistente-instalacao-sh
-                git pull && errorValidation
+                sudo git pull && errorValidation
                 installBasicSettings
                 installAirvisonJarSettings
             else
-                git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && errorValidation
+                sudo git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && errorValidation
                 cd /./assistente-instalacao-sh
                 installBasicSettings
                 installAirvisonJarSettings
@@ -105,11 +105,11 @@ menu() {
             cd /
             if [ -e "/assistente-instalacao-sh" ]; then
                 cd /./assistente-instalacao-sh
-                git pull && errorValidation
+                sudo git pull && errorValidation
                 installBasicSettings
                 installDockerSettings
             else
-                git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && errorValidation
+                sudo git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && errorValidation
                 cd /./assistente-instalacao-sh
                 installBasicSettings
                 installDockerSettings
@@ -150,7 +150,7 @@ menu() {
         update) #====================ATUALIZAR====================
             argumento="Atualizando..." && sleepTime="2" && execTimeSleepArg
             cd /./assistente-instalacao-sh
-            git pull && errorValidation && source ./airvision-install-menu.sh
+            sudo git pull && errorValidation && source ./airvision-install-menu.sh
             echo "================================================"
             ;;
 

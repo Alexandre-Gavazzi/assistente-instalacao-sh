@@ -31,6 +31,7 @@ services:
       - ./java:/usr/src/myapp
     working_dir: /usr/src/myapp
     command: java -jar airvision.jar CLI
+    # tty: true
 
   # ======= IMAGEM'S PARA TESTES =======
 
