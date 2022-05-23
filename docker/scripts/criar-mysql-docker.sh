@@ -1,5 +1,4 @@
 #!/bin/bash
-dir_atual=$(pwd)
 clear
 
 pressEnterContinue() {
@@ -37,6 +36,9 @@ echo
 echo "   1 - O script 'criar-mysql-docker.sh' está na mesma pasta que o script.sql"
 echo "   2 - O terminal bash deve estar aberto na pasta onde está o script.sql"
 echo "   3 - Só pode existir 1 arquivo.sql dentro da pasta!"
+echo "   4 - O arquivo sql não deve ter nenhum 'CREATE DATABASE' pois será criado neste shell script."
+echo "   5 - O aqruivo sql não pode ter nenhum 'USE <database>' pois o script também já faz essa função..."
+echo "   obs: O arquivo sql deve ter somente do primeiro 'CREATE TABLE...' pra baixo..."
 pressEnterContinue
 
 echo && echo "===  Nome do Container:" && read nomeContainer && pressEnterContinue
@@ -57,6 +59,7 @@ errorValidationContainer
 echo && echo "===  INSERIR SCRIPT.SQL NO BANCO DE DADOS: $nomeBanco" && echo
 echo "===  Obs: Caso não for adicionar um script sql, fechar o terminal." && pressEnterContinue
 
+dir_atual=$(pwd)
 file_sql=$(find *.sql)
 
 # COMANDO USADO PARA TESTE

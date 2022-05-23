@@ -8,7 +8,8 @@ para iniciar o docker com sistema:
   sudo systemctl enable docker
 
 para entrar no container do mysql:
-  docker exec -it mysql bash
+  echo "CONCLUÍDO"
+sleep 3
 
   mysql parametros:
    -h   |   host

@@ -27,9 +27,10 @@ menuDocker() {
         echo -e "  2) Iniciar um container     $cBlueN|$cYellowN  4) Parar um container         $cBlueN"
         echo "--------------------------------------------------------------"
         echo "                        OUTROS COMANDOS                       "
-        echo -e "$cYellowN                            5 - Limpar Container's            "
-        echo "                            6 - Limpar Imagens's              "
-        echo "                            7 - Limpar Tudo(cuidado)          "
+        echo -e "$cYellowN                            5 - Listar Container's(On and Off)"
+        echo "                            6 - Limpar Container's            "
+        echo "                            7 - Limpar Imagens's              "
+        echo "                            8 - Limpar Tudo(cuidado)          "
         echo "                       return - Voltar MENU AIRVISION         "
         echo -e "                         help - AJUDA (desenvolvendo)         $cBlueN"
         echo "=============================================================="
@@ -89,7 +90,19 @@ menuDocker() {
             echo "================================================"
             ;;
 
-        5) #====================LIMPAR CONTAINERS====================
+        5) #====================LISTAR CONTAINERS====================
+            echo -e "$cBlueN                                                              "
+            echo "                    LISTA DE CONTAINERS"
+            echo -e "=========================================================================================================================$cYellowN"
+            docker ps -a --format "table {{.Names}}\t{{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}"
+            echo -e "$cBlueN=========================================================================================================================$cYellowN"
+            echo && read -p "===  Press Enter to continue ..."
+            sleep 1
+            echo -e "$cReset"
+            echo "================================================"
+            ;;
+
+        6) #====================LIMPAR CONTAINERS====================
             argumento="Removendo container's docker..." && sleepTime="2" && execTimeSleepArg
             echo -e "$cBlueN"
             docker rm $(docker ps -aq) -f && errorValidation
@@ -99,7 +112,7 @@ menuDocker() {
             echo "================================================"
             ;;
 
-        6) #====================LIMPAR IMAGENS====================
+        7) #====================LIMPAR IMAGENS====================
             argumento="Removendo imagens docker..." && sleepTime="2" && execTimeSleepArg
             echo -e "$cBlueN"
             docker rmi $(docker images -aq) -f && errorValidation
@@ -109,7 +122,7 @@ menuDocker() {
             echo "================================================"
             ;;
 
-        7) #====================LIMPAR TUDO====================
+        8) #====================LIMPAR TUDO====================
             argumento="Remover todos arquivos docker..." && sleepTime="3" && execTimeSleepArg
             echo -e "$cBlueN"
             echo "=============================================================="
