@@ -39,9 +39,10 @@ dockerAndAirvisionJarExists() {
         echo "                        MONITORAMENTO                         "
         echo -e "$cYellowN                            1 - Abrir AirVision CLI           $cBlueN"
         echo -e "$cYellowN                            2 - Abrir AirVision GUI           $cBlueN"
+        echo -e "$cYellowN                            3 - Abrir AirVision Container Docker$cBlueN"
         echo "--------------------------------------------------------------"
         echo "                        DOCKER-COMPOSE                        "
-        echo -e "$cYellowN                            3 - Abrir MENU DOCKER             $cBlueN"
+        echo -e "$cYellowN                            4 - Abrir MENU DOCKER             $cBlueN"
         echo "--------------------------------------------------------------"
     else
         echo "             COMAND INSTALL AIRVISION AND DOCKER              "
