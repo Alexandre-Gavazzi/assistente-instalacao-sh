@@ -1,0 +1,32 @@
+COMANDO PARA APAGAR TODOS OS CONTAINERS...
+docker rm $(docker ps -aq) -f
+
+
+
+COMANDOS PARA INSTALAÇÃO DO DOCKER E DOCKER-COMPOSE, PARA LINUX... (Instância ou um PC-Linux)
+Obs: tanto faz deixar ou tirar o docker-compose...
+  sudo apt update && sudo apt upgrade -y
+  sudo apt install docker.io -y
+  sudo apt install docker-compose -y
+  sudo apt-get install \
+      ca-certificates \
+      curl \
+      gnupg \
+      lsb-release -y
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt-get update
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+  sudo apt-get update
+
+
+
+COMANDO PARA BAIXAR IMAGEM MAIS ATUAL DO MYSQL:
+sudo docker pull mysql
+
+COMANDO PARA BAIXAR IMAGEM DO MYSQL NA VERSÃO 5.7:
+sudo docker pull mysql:5.7
+
+TANTO FAZ A QUE VAI USAR.
