@@ -42,7 +42,7 @@ create table disco (
 
 create table memoria (
     id_memoria int primary key auto_increment,
-    total varchar(150),
+    total float,
     fk_maquina int,
     foreign key (fk_maquina) references maquina (id_maquina)
 );
@@ -58,17 +58,18 @@ create table cpu (
 
 create table logs_disco(
     id_logs_disco int primary key auto_increment,
-    disco_leitura varchar(150),
-    disco_escrita varchar(150),
-    tamanho_atual_fila varchar(150),
+    tamanho_do_volume float,
+    volume_utilizado float,
+    volume_disponivel float,
     data_hora datetime,
     fk_disco int,
+    time_res_seconds float,
     foreign key (fk_disco) references disco (id_disco)
 );
 
 create table logs_cpu(
     id_logs_cpu int primary key auto_increment,
-    em_uso varchar(150),
+    em_uso float,
     data_hora datetime,
     fk_cpu int,
     foreign key (fk_cpu) references cpu (id_cpu)
@@ -76,8 +77,9 @@ create table logs_cpu(
 
 create table logs_memoria(
     id_logs_memoria int primary key auto_increment,
-    ram_disponivel varchar(150),
-    ram_uso varchar(150),
+    ram_disponivel float,
+    ram_uso float,
+    ram_porcentagem float,
     data_hora datetime,
     fk_memoria int,
     foreign key (fk_memoria) references memoria (id_memoria)

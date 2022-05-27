@@ -27,11 +27,11 @@ services:
   java:
     image: openjdk:11
     container_name: jdk
-    volumes:
-      - ./java:/usr/src/myapp
+    # volumes:
+      # - ./java:/usr/src/myapp
     working_dir: /usr/src/myapp
-    command: java -jar airvision.jar CLI
-    # tty: true
+    # command: java -jar airvision.jar CLI
+    tty: true
 
   # ======= IMAGEM'S PARA TESTES =======
 

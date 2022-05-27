@@ -141,16 +141,7 @@ menu() {
             echo "================================================"
             ;;
 
-        3) #====================INICIAR O AirVision.jar via | Interface de Linha de Comando(CLI) Command Line Interface====================
-            argumento="Iniciando... AirVision ClI Container Java - Docker" && sleepTime="3" && execTimeSleepArg
-            cd /./assistente-instalacao-sh/docker
-            docker-compose run java
-
-            argumento="Finalizando Cotainer Java CLI - Docker..." && sleepTime="3" && execTimeSleepArg
-            echo "================================================"
-            ;;
-
-        4) #====================ABRINDO MENU DOCKER====================
+        3) #====================ABRINDO MENU DOCKER====================
             argumento="Abrindo menu docker..." && sleepTime="3" && execTimeSleepArg
             cd /./assistente-instalacao-sh && source ./airvision-menu-docker.sh
             echo "================================================"
