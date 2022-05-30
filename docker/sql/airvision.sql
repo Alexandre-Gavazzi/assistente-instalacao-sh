@@ -61,7 +61,7 @@ create table logs_disco(
     tamanho_do_volume float,
     volume_utilizado float,
     volume_disponivel float,
-    data_hora datetime,
+    data_hora datetime DEFAULT CURRENT_TIMESTAMP,
     fk_disco int,
     time_res_seconds float,
     foreign key (fk_disco) references disco (id_disco)
@@ -70,7 +70,7 @@ create table logs_disco(
 create table logs_cpu(
     id_logs_cpu int primary key auto_increment,
     em_uso float,
-    data_hora datetime,
+    data_hora datetime DEFAULT CURRENT_TIMESTAMP,
     fk_cpu int,
     foreign key (fk_cpu) references cpu (id_cpu)
 );
@@ -80,7 +80,7 @@ create table logs_memoria(
     ram_disponivel float,
     ram_uso float,
     ram_porcentagem float,
-    data_hora datetime,
+    data_hora datetime DEFAULT CURRENT_TIMESTAMP,
     fk_memoria int,
     foreign key (fk_memoria) references memoria (id_memoria)
 );
