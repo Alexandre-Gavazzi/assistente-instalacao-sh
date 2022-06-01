@@ -22,7 +22,6 @@ Obs: tanto faz deixar ou tirar o docker-compose...
   sudo apt-get update
 
 
-
 COMANDO PARA BAIXAR IMAGEM MAIS ATUAL DO MYSQL:
 sudo docker pull mysql
 
