@@ -17,7 +17,7 @@
   🚩 Execute o seguinte comando para efetuar o download e preparação da máquina:
 
   ```sh
-  cd / && sudo git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && cd /./assistente-instalacao-sh && sudo git checkout main airvision-install-menu.sh && sudo git checkout main includes && sudo chmod +x airvision-install-menu.sh && sudo chmod +x includes/* && cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
+  cd / && sudo git clone -n https://github.com/Alexandre-Gavazzi/assistente-instalacao-sh.git && cd /./assistente-instalacao-sh && sudo git checkout main airvision-install-menu.sh && sudo git checkout main includes && sudo chmod +x airvision-menu-mysql.sh && sudo chmod +x airvision-install-menu.sh && sudo chmod +x includes/* && cd /./assistente-instalacao-sh && ./airvision-install-menu.sh
   ```
 
   <i>`O comando acima está baixando o repositório de instalação/uso, fornecendo as permissões necessárias para os script's em shell e iniciando o menu de instalação/uso do AirVision.`</i> <br>

@@ -5,16 +5,16 @@ x="teste"
 verificacaoSelect() {
     echo "                                                              "
     echo "                         SELECT logs_$selectLog"
-    echo -e "==============================================================$cYellowN"
-    if [$selectLog = "cpu"]; then
+    echo -e "$cBlueN==============================================================$cYellowN"
+    if ["$selectLog"="cpu"]; then
         docker exec mysql mysql -uroot -proot airvision -e "select id_logs_cpu as ID, em_uso as 'Uso%', data_hora as '=    Data/Hora    =', fk_cpu as 'ID Componente' from logs_cpu order by id_logs_cpu $descOrAsc;"
         errorValidation
     fi
-    if [$selectLog = "memoria"]; then
+    if ["$selectLog"="memoria"]; then
         docker exec mysql mysql -uroot -proot airvision -e "select id_logs_memoria as ID, ram_porcentagem as 'Uso%', data_hora as '=    Data/Hora    =', fk_memoria as 'ID Componente' from logs_memoria order by id_logs_memoria $descOrAsc;"
         errorValidation
     fi
-    if [$selectLog = "disco"]; then
+    if ["$selectLog"="disco"]; then
         docker exec mysql mysql -uroot -proot airvision -e "select id_logs_disco as ID, tamanho_do_volume as 'MAX', volume_utilizado as 'USED', volume_disponivel as 'OPEN', time_res_seconds as 'TimeUso', data_hora as '=    Data/Hora    =', fk_disco as 'ID Componente' from logs_disco order by id_logs_disco $descOrAsc;"
         errorValidation
     fi
@@ -28,12 +28,12 @@ menuDescOrAsc() {
     while true $opcaoOrdenacao != "teste"; do
         clear
         echo
-        echo -e "==============================================================$cYellowN"
-        echo "               Como deseja a ordenacao de exibicao?           "
+        echo -e "$cBlueN==============================================================$cYellowN"
+        echo "             Como deseja a ordenacao de exibicao?           "
         echo
-        echo "                         1 - CRESCENTE"
-        echo "                         2 - DECRESCENTE"
-        echo "                         3 - Volta ao MENU MYSQL"
+        echo "                       1 - CRESCENTE"
+        echo "                       2 - DECRESCENTE"
+        echo "                       3 - Volta ao MENU MYSQL"
         echo
         echo "Digite uma opção:"
         read opcaoOrdenacao
