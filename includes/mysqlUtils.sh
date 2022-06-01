@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /./assistente-instalacao-sh && source ./includes/utils.sh
+
 x="teste"
 
 verificacaoSelect() {
