@@ -16,6 +16,7 @@ services:
       - ./sql:/docker-entrypoint-initdb.d
     ports:
       - 3308:3306
+    tty: true
 
   adminer:
     image: adminer
@@ -28,11 +29,10 @@ services:
     image: openjdk:11
     container_name: jdk
     # volumes:
-      # - ./java:/usr/src/myapp
+    # - ./java:/usr/src/myapp
     working_dir: /usr/src/myapp
     # command: java -jar airvision.jar CLI
     tty: true
-
   # ======= IMAGEM'S PARA TESTES =======
 
   # java:

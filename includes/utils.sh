@@ -41,3 +41,8 @@ errorValidation() {
         echo -e "============================================$cReset" && sleep 5
     fi
 }
+
+pressEnterContinue() {
+    echo && read -p "===  Press Enter to continue ..."
+    clear
+}
