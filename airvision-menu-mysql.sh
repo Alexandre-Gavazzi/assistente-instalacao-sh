@@ -47,7 +47,7 @@ menuMysql() {
         1) #====================SELECT LOGS CPU====================
             argumento="Efetuando exibicao dos Logs CPU..." && sleepTime="2" && execTimeSleepArg
             cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
-            menuDescOrAsc && fazerSelectCpu
+            select="selectCpu" && menuDescOrAsc
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
@@ -55,7 +55,7 @@ menuMysql() {
         2) #====================SELECT LOGS RAM====================
             argumento="Efetuando exibicao dos Logs RAM..." && sleepTime="2" && execTimeSleepArg
             cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
-            menuDescOrAsc && fazerSelectRam
+            select="selectRam" && menuDescOrAsc
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
@@ -63,7 +63,7 @@ menuMysql() {
         3) #====================SELECT LOGS DISCO====================
             argumento="Efetuando exibicao dos Logs DISCO..." && sleepTime="2" && execTimeSleepArg
             cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
-            menuDescOrAsc && fazerSelectDisco
+            select="selectDisco" && menuDescOrAsc
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
