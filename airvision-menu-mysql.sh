@@ -5,6 +5,7 @@ x="teste"
 cd /./assistente-instalacao-sh
 sudo git checkout main includes
 source ./includes/utils.sh
+source ./includes/mysqlUtils.sh
 
 menuMysql() {
     while true $opcaoMysql != "teste"; do
@@ -46,30 +47,21 @@ menuMysql() {
 
         1) #====================SELECT LOGS CPU====================
             argumento="Efetuando exibicao dos Logs CPU..." && sleepTime="2" && execTimeSleepArg
-            echo -e "$cBlueN====================================================================$cYellowN"
-            selectLog="cpu" && menuDescOrAsc
-            cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
-            echo -e "$cReset"
+            menuDescOrAsc && fazerSelectCpu
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         2) #====================SELECT LOGS RAM====================
             argumento="Efetuando exibicao dos Logs RAM..." && sleepTime="2" && execTimeSleepArg
-            echo -e "$cBlueN====================================================================$cYellowN"
-            selectLog="memoria" && menuDescOrAsc
-            cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
-            echo -e "$cReset"
+            menuDescOrAsc && fazerSelectRam
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         3) #====================SELECT LOGS DISCO====================
             argumento="Efetuando exibicao dos Logs DISCO..." && sleepTime="2" && execTimeSleepArg
-            echo -e "$cBlueN====================================================================$cYellowN"
-            selectLog="disco" && menuDescOrAsc
-            cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
-            echo -e "$cReset"
+            menuDescOrAsc && fazerSelectDisco
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
