@@ -9,12 +9,12 @@ source ./includes/utils.sh
 menuMysql() {
     while true $opcaoMysql != "teste"; do
         clear
-        echo
-        echo -e ''$cWhiteN'  {`\            '$cYellowN'                ______   ______   __'
+        echo -e ''$cWhiteN'  ,.             '$cYellowN''
+        echo -e ''$cWhiteN'  \ \            '$cYellowN'                ______   ______   __'
         echo -e ''$cWhiteN'  \   `-.        '$cYellowN'|\    /|       |  ____| |  __  | |  |'
-        echo -e ''$cWhiteN'  \   °  \       '$cYellowN'| \  / |       | |      | |  | | |  |'
+        echo -e ''$cWhiteN'  \   o  \       '$cYellowN'| \  / |       | |      | |  | | |  |'
         echo -e ''$cWhiteN'   {       \     '$cYellowN'|  \/  | _   _ | |____  | |  | | |  |'
-        echo -e ''$cWhiteN'   / .      `.   '$cYellowN'|      | \ \/ /|____  | | |  | | |  |'
+        echo -e ''$cWhiteN'   / /      `.   '$cYellowN'|      | \ \/ /|____  | | |  | | |  |'
         echo -e ''$cWhiteN'   {/ \       `, '$cYellowN'| |\/| |  \  /      | | | |  | | |  |'
         echo -e ''$cWhiteN'       \    \´   '$cYellowN'| |  | |  / /   ____| | | |\\\| | |  |_____'
         echo -e ''$cWhiteN'       {     `-. '$cYellowN'|_|  |_| /_/   |______| |___\\\_| |________|'
@@ -92,7 +92,7 @@ menuMysql() {
             echo "================================================"
             ;;
 
-        7) #====================SELECT MAQUINA LOCAL==================== 
+        7) #====================SELECT MAQUINA LOCAL====================
             argumento="Efetuando exibicao da MAQUINA..." && sleepTime="2" && execTimeSleepArg
             cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
             select="selectMaquina" && modeloExibicao
