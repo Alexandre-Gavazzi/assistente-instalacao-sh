@@ -101,7 +101,8 @@ menuMysql() {
             ;;
         8) #====================EXECUTAR COMANDO NO BANCO====================
             argumento="Iniciando Interacao SQL..." && sleepTime="2" && execTimeSleepArg
-
+            cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
+            executarComandoSQL
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
