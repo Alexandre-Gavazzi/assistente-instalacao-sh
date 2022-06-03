@@ -111,7 +111,8 @@ executarMaisComandos() {
         read executarMais
         if [ "$executarMais" = 'y' ]; then
             echo
-            echo -e "Digite um comando SQL:$cMagentaN"
+            echo "Digite um comando SQL:"
+            echo -e "Ajuda: /help $cMagentaN"
             read comandoSQL
             if [ "$comandoSQL" = '/help' ]; then
                 helpSQL
@@ -140,11 +141,6 @@ executarComandoSQL() {
 
         case "$comandoSQL" in
 
-        *) #====================COMANDO====================
-            argumento="Executando SQL..." && sleepTime="1" && execTimeSleepArg
-            dockerComandoSQL
-            executarMaisComandos
-            ;;
         /help) #====================HELP====================
             argumento="Help SQL - Abrindo..." && sleepTime="2" && execTimeSleepArg
             helpSQL
@@ -152,6 +148,11 @@ executarComandoSQL() {
         return) #====================VOLTAR MENU MYSQL====================
             argumento="Voltando MENU MYSQL..." && sleepTime="2" && execTimeSleepArg
             cd /./assistente-instalacao-sh && source ./airvision-menu-mysql.sh
+            ;;
+        *) #====================COMANDO====================
+            argumento="Executando SQL..." && sleepTime="1" && execTimeSleepArg
+            dockerComandoSQL
+            executarMaisComandos
             ;;
         esac
     done
