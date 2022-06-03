@@ -53,7 +53,7 @@ menuDescOrAsc() {
     while true $opcaoOrdenacao != "teste"; do
         clear
         echo
-        echo -e "$cBlueN                   COMANDOS EXECUTADOS MYSQL"
+        echo -e "$cBlueN                     ORDENACAO DO SELECT"
         echo -e "$cBlueN==============================================================$cYellowN"
         echo "             Como deseja a ordenacao de exibicao?           "
         echo
@@ -90,6 +90,7 @@ menuDescOrAsc() {
 
 dockerComandoSQL() {
     echo
+    echo -e "$cBlueN                   COMANDOS EXECUTADOS MYSQL"
     echo -e "$cBlueN===================================================================$cYellowN"
     echo
     docker exec mysql mysql -uroot -proot airvision -e "$comandoSQL" && errorValidation
