@@ -42,6 +42,8 @@ dockerAndAirvisionJarExists() {
         echo "--------------------------------------------------------------"
         echo "                        DOCKER-COMPOSE                        "
         echo -e "$cYellowN                            3 - Abrir MENU DOCKER             $cBlueN"
+        echo "--------------------------------------------------------------"
+        echo "                          MYSQL-LOCAL                         "
         echo -e "$cYellowN                            4 - Abrir MENU MYSQL              $cBlueN"
         echo "--------------------------------------------------------------"
     else
