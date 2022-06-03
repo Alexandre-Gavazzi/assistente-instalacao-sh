@@ -53,6 +53,7 @@ menuDescOrAsc() {
     while true $opcaoOrdenacao != "teste"; do
         clear
         echo
+        echo -e "$cBlueN                   COMANDOS EXECUTADOS MYSQL"
         echo -e "$cBlueN==============================================================$cYellowN"
         echo "             Como deseja a ordenacao de exibicao?           "
         echo
