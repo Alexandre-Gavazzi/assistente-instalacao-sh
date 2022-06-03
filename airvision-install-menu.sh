@@ -146,6 +146,11 @@ menu() {
             cd /./assistente-instalacao-sh && source ./airvision-menu-docker.sh
             echo "================================================"
             ;;
+        4) #====================ABRINDO MENU MYSQL====================
+            argumento="Abrindo menu mysql..." && sleepTime="3" && execTimeSleepArg
+            cd /./assistente-instalacao-sh && source ./airvision-menu-mysql.sh
+            echo "================================================"
+            ;;
 
         update) #====================ATUALIZAR====================
             argumento="Atualizando..." && sleepTime="2" && execTimeSleepArg

@@ -42,6 +42,7 @@ dockerAndAirvisionJarExists() {
         echo "--------------------------------------------------------------"
         echo "                        DOCKER-COMPOSE                        "
         echo -e "$cYellowN                            3 - Abrir MENU DOCKER             $cBlueN"
+        echo -e "$cYellowN                            4 - Abrir MENU MYSQL              $cBlueN"
         echo "--------------------------------------------------------------"
     else
         echo "             COMAND INSTALL AIRVISION AND DOCKER              "
