@@ -70,59 +70,38 @@ menuMysql() {
 
         4) #====================SELECT COMPONENTE CPU====================
             argumento="Efetuando exibicao do Comp. CPU..." && sleepTime="2" && execTimeSleepArg
-            echo -e "$cBlueN"
-            acaoStopOrStart="stop"
-            dockerStartStop
-            errorValidation
-            sleep 2
-            echo -e "$cReset"
+            cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
+            select="selectCompCPU" && modeloExibicao
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         5) #====================SELECT COMPONENTE RAM====================
             argumento="Efetuando exibicao do Comp. RAM..." && sleepTime="2" && execTimeSleepArg
-            echo -e "$cBlueN"
-            acaoStopOrStart="stop"
-            dockerStartStop
-            errorValidation
-            sleep 2
-            echo -e "$cReset"
+            cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
+            select="selectCompRAM" && modeloExibicao
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
         6) #====================SELECT COMPONENTE DISCO====================
             argumento="Efetuando exibicao do Comp. DISCO..." && sleepTime="2" && execTimeSleepArg
-            echo -e "$cBlueN"
-            acaoStopOrStart="stop"
-            dockerStartStop
-            errorValidation
-            sleep 2
-            echo -e "$cReset"
+            cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
+            select="selectCompDISCO" && modeloExibicao
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
 
-        7) #====================SELECT MAQUINA LOCAL====================
+        7) #====================SELECT MAQUINA LOCAL==================== 
             argumento="Efetuando exibicao da MAQUINA..." && sleepTime="2" && execTimeSleepArg
-            echo -e "$cBlueN"
-            acaoStopOrStart="stop"
-            dockerStartStop
-            errorValidation
-            sleep 2
-            echo -e "$cReset"
+            cd /./assistente-instalacao-sh/includes && source ./mysqlUtils.sh
+            select="selectMaquina" && modeloExibicao
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
         8) #====================EXECUTAR COMANDO NO BANCO====================
             argumento="Iniciando Interacao SQL..." && sleepTime="2" && execTimeSleepArg
-            echo -e "$cBlueN"
-            acaoStopOrStart="stop"
-            dockerStartStop
-            errorValidation
-            sleep 2
-            echo -e "$cReset"
+
             argumento="Script Concluído..." && sleepTime="2" && execTimeSleepArg
             echo "================================================"
             ;;
