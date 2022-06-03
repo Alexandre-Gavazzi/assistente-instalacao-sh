@@ -6,18 +6,22 @@ cd /./assistente-instalacao-sh
 sudo git checkout main includes
 source ./includes/utils.sh
 
+# CORES DO GOLFINHO
+a="$cBlueN"
+b="$cWhiteN"
+
 menuMysql() {
     while true $opcaoMysql != "teste"; do
         clear
         echo -e ''$cWhiteN'  ,.             '$cYellowN''
-        echo -e ''$cWhiteN'  \ \            '$cYellowN'                ______   ______   __'
-        echo -e ''$cWhiteN'  \   `-.        '$cYellowN'|\    /|       |  ____| |  __  | |  |'
-        echo -e ''$cWhiteN'  \   o  \       '$cYellowN'| \  / |       | |      | |  | | |  |'
-        echo -e ''$cWhiteN'   {       \     '$cYellowN'|  \/  | _   _ | |____  | |  | | |  |'
-        echo -e ''$cWhiteN'   / /      `.   '$cYellowN'|      | \ \/ /|____  | | |  | | |  |'
-        echo -e ''$cWhiteN'   {/ \       `, '$cYellowN'| |\/| |  \  /      | | | |  | | |  |'
-        echo -e ''$cWhiteN'       \    \´   '$cYellowN'| |  | |  / /   ____| | | |\\\| | |  |_____'
-        echo -e ''$cWhiteN'       {     `-. '$cYellowN'|_|  |_| /_/   |______| |___\\\_| |________|'
+        echo -e ''$cWhiteN'  \\'$a'☒'$b'\\            '$cYellowN'                ______   ______   __'
+        echo -e ''$cWhiteN'  \\'$a'☒☒☒'$b'`-.        '$cYellowN'|\    /|       |  ____| |  __  | |  |'
+        echo -e ''$cWhiteN'  \\'$a'☒☒☒'$b'o'$a'☒☒'$b'\       '$cYellowN'| \  / |       | |      | |  | | |  |'
+        echo -e ''$cWhiteN'   {'$a'☒☒☒☒☒☒☒'$b'\     '$cYellowN'|  \/  | _   _ | |____  | |  | | |  |'
+        echo -e ''$cWhiteN'   /'$a'☒'$b'/'$a'☒☒☒☒☒☒'$b'`.   '$cYellowN'|      | \ \/ /|____  | | |  | | |  |'
+        echo -e ''$cWhiteN'   {/ \\'$a'☒☒☒☒☒☒☒'$b'`, '$cYellowN'| |\/| |  \  /      | | | |  | | |  |'
+        echo -e ''$cWhiteN'       \\'$a'☒☒☒☒'$b'\´   '$cYellowN'| |  | |  / /   ____| | | |\\\| | |  |_____'
+        echo -e ''$cWhiteN'       {'$a'☒☒☒☒☒'$b'`-. '$cYellowN'|_|  |_| /_/   |______| |___\\\_| |________|'
         echo -e ''$cBlueN'                                                                 '
         echo "=============================================================="
         echo "                       MENU MYSQL - LOCAL                     "
