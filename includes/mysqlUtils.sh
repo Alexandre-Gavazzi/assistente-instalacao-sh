@@ -93,15 +93,15 @@ dockerComandoSQL() {
     echo -e "$cBlueN                   COMANDOS EXECUTADOS MYSQL"
     echo -e "$cBlueN===================================================================$cYellowN"
     echo
-    docker exec mysql mysql -uroot -proot airvision -e "$comandoSQL" && errorValidation
+    docker exec mysql mysql -uroot -proot airvision -e "$comandoSQL"
     echo
     echo -e "$cBlueN===================================================================$cYellowN"
 }
 
 helpSQL() {
     echo
-    echo -e "=============================================================="
-    echo -e "                           AJUDA"
+    echo -e "$cBlueN=============================================================="
+    echo -e "                           AJUDA$cYellowN"
     pressEnterContinue
     sleep 1
 }
@@ -114,7 +114,7 @@ executarMaisComandos() {
         if [ "$executarMais" = 'y' ]; then
             echo
             echo "Digite um comando SQL:"
-            echo -e "Ajuda: /help $cMagentaN"
+            echo -e "   ajuda => /help $cMagentaN"
             read comandoSQL
             if [ "$comandoSQL" = '/help' ]; then
                 helpSQL
